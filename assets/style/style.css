@@ -30,6 +30,7 @@ body{
 }
 .date-container .time {
     font-size: 70px;
+    text-shadow: 0px 4px black;
 }
 .date-container #am-pm {
     font-size: 30px;
@@ -37,6 +38,7 @@ body{
 }
 .date-container .date {
     font-size: 30px;
+    text-shadow: 0px 4px black;
 }
 .place-container {
     text-align: end;
@@ -44,10 +46,11 @@ body{
 .place-container .time-zone{
     font-size: 30px;
     font-weight: 100;
+    text-shadow: 0px 2.5px black;
 }
 .place-container .country {
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 700; 
 }
 .current-info .others {
     display: flex;
@@ -75,6 +78,7 @@ body{
     width: 100%;
     align-items: center;
     justify-content: center;
+    border: 2px solid white;
 }
 .future-forecast .today {
     display: flex;
@@ -104,6 +108,7 @@ body{
     border: 1px solid white;
     border-radius: 10px;
     padding: 15px;
+    background:rgba(0, 0, 0, 0.2)
 }
 
 .weather-forecast .weather-forecast-item .day {
@@ -114,10 +119,16 @@ body{
 }
 .weather-forecast .weather-forecast-item .temp {
     font-weight: 100;
+    font-size: 12px;
+}
+.weather-forecast.weather-forecast {
+    width: auto;
+    padding-left: 75px;
 }
 
+
 /* Media Query for Responsiveness */
-@media only screen and (max-width: 730px){
+@media only screen and (max-width: 900px){
     .container{
         padding: 20px;
     }
@@ -143,7 +154,9 @@ body{
         margin-top: 15px;
     }
     .place-container .time-zone {
-        font-size: 17px;
+        font-size: 24px;
+        text-shadow: 2px 0px black;
+        
     }
     .current-info .others {
         padding: 12px;
@@ -151,14 +164,27 @@ body{
     .current-info .others .weather-item {
         font-size: 14px;
     }
+    .current-info {
+        height: 25%;
+    }
+    .weather-forecast.weather-forecast {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .day {
+        width: 130px;
+    }
+    .today {
+        padding-left: 10%;
+        padding-right: 17%;
+    }
 }
-.w-icon {
-    width: 30%;
-}
+
 @media only screen and (max-width: 1600px) {
     .future-forecast{
         justify-content: start;
         align-items: none;
-        overflow-y: scroll;
+        overflow-x: scroll;
     }
 }
