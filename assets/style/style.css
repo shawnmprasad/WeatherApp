@@ -8,7 +8,7 @@
  }
 
 body{
-    background-image: url(/assets/img/trees-sunrise.jpg), url(/assets/img/sunrisemorning.jpg);
+    background-image: url(/WeatherApp/assets/img/trees-sunrise.jpg), url(/WeatherApp/assets/img/sunrisemorning.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
@@ -77,7 +77,7 @@ body{
     color: white;
     width: 100%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     border: 2px solid white;
 }
 .future-forecast .today {
@@ -97,6 +97,7 @@ body{
 }
 .future-forecast .weather-forecast {
     display: flex;
+    align-items: center;
 }
 
 .weather-forecast .weather-forecast-item {

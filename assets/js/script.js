@@ -6,7 +6,7 @@ const timeZone = document.getElementById('time-zone');
 const countryElement = document.getElementById('country');
 const weatherForecastElement = document.getElementById('weather-forecast');
 const currentTemperatureElement = document.getElementById('current-temp');
-const futureWeatherElement = document.getElementById('')
+const futureWeatherElement = document.getElementById('');
 const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
@@ -48,6 +48,7 @@ function showWeatherData (data){
     let sunrise = data.city.sunrise;
     let sunset = data.city.sunset;
     let temperature = data.list[0].main.temp;
+    
     countryElement.innerHTML = data.city.coord.lat + 'N ' + data.city.coord.lon + 'E '
     currentWeatherItemsElement.innerHTML = 
     `<div class="weather-item">
@@ -80,11 +81,14 @@ function showWeatherData (data){
 // API weatherapi.com
 getWeatherData2();
 function getWeatherData2 () {
-        fetch(`https://api.weatherapi.com/v1/forecast.json?key=b12be161049c4d4c93f33500232001&q=Honolulu&days=5&aqi=no&alerts=no`).then(res => res.json()).then(data2 => {
+    navigator.geolocation.getCurrentPosition((success2) =>{
+        let {latitude, longitude } = success2.coords;
+        fetch(`https://api.weatherapi.com/v1/forecast.json?key=b12be161049c4d4c93f33500232001&q=${latitude},${longitude}&days=10&aqi=no&alerts=no`).then(res => res.json()).then(data2 => {
             console.log(data2)
             showWeatherData2(data2);
         })
-    };
+    })
+};
 
 function showWeatherData2(data2) {
 // current icon
