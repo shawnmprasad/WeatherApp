@@ -7,7 +7,7 @@
     padding: 0;
  }
 body{
-    background-image:  url(/assets/img/sunrisemorning.jpg);
+    background-image: url(/assets/img/trees-sunrise.jpg),url(/assets/img/sunrisemorning.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
