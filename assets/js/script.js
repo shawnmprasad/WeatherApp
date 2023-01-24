@@ -80,7 +80,7 @@ function showWeatherData (data){
 // API weatherapi.com
 getWeatherData2();
 function getWeatherData2 () {
-        fetch(`http://api.weatherapi.com/v1/forecast.json?key=b12be161049c4d4c93f33500232001&q=Honolulu&days=5&aqi=no&alerts=no`).then(res => res.json()).then(data2 => {
+        fetch(`https://api.weatherapi.com/v1/forecast.json?key=b12be161049c4d4c93f33500232001&q=Honolulu&days=5&aqi=no&alerts=no`).then(res => res.json()).then(data2 => {
             console.log(data2)
             showWeatherData2(data2);
         })
@@ -93,7 +93,7 @@ function showWeatherData2(data2) {
           if(data2.forecast.forecastday[0]){       
     currentTemperatureElement.innerHTML = 
     `
-    <img src="http:${data2.forecast.forecastday[0].day.condition.icon}" alt="weather-icon" class="w-icon">
+    <img src="https:${data2.forecast.forecastday[0].day.condition.icon}" alt="weather-icon" class="w-icon">
     <div class="other">
         <div class="day">${'Today'}</div>
         <div class="temp">Night: ${date.day.mintemp_f}&#176; F</div>
