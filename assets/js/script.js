@@ -20,10 +20,11 @@ setInterval(() => {
     const date = time.getDate();
     const year = time.getFullYear();
     const hour = time.getHours();
-    const hoursIn12hrFormat = hour >= 13 ? hour %12: hour
+    const hoursIn12hrFormat = hour === 0 ? 12 : hour >= 13 ? hour %12: hour;
     const minutes = time.getMinutes();
-    const minutesFormula = (minutes < 10 ? "0" : "") + minutes;
+    const minutesFormula = minutes === 0 ? "00" : (minutes < 10 ? "0" : "") + minutes;
     const ampm = hour >= 12 ? 'PM' : 'AM';
+
      //Time fetch
     timeElement.innerHTML = hoursIn12hrFormat + ':' + minutesFormula + `<span id ="am-pm">${ampm}</span>`
     // Date fetch
