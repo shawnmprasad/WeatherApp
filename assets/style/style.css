@@ -29,7 +29,7 @@ body{
     font-weight: 100;
 }
 .date-container .time {
-    font-size: 70px;
+    font-size: 8rem;
     text-shadow: 0px 4px black;
 }
 .date-container #am-pm {
@@ -68,6 +68,7 @@ body{
 
 /* bottom section */
 
+
 .future-forecast {
     background: rgba(24, 24, 27, 0.8);
     padding: 25px;
@@ -77,8 +78,9 @@ body{
     color: white;
     width: 100%;
     align-items: center;
-    justify-content: space-around;
     border: 2px solid white;
+    justify-content: space-between;
+    overflow-x: scroll;
 }
 .future-forecast .today {
     display: flex;
@@ -86,7 +88,10 @@ body{
     justify-content: center;
     transition: transform 0.2s ease-in-out;
 }
-
+.today {
+padding-left: 2%;
+padding-right: 17%;
+}
 .future-forecast .today:hover {
     transform: scale(1.2);
 }
@@ -128,15 +133,18 @@ body{
     font-weight: 100;
     font-size: 12px;
 }
-.weather-forecast.weather-forecast {
-    width: auto;
-    padding-left: 75px;
+.weather-forecast .weather-forecast {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1rem;
+    border: 1px solid white;
 }
 
 
 
 /* Mobile Device Resolution */
-@media only screen and (min-width: 320px) and (max-width: 636px){
+@media only screen and (min-width: 320px) and (max-width: 911px){
     body{
         background-image: url(/WeatherApp/assets/img/trees-sunrise.jpg);
         background-repeat: no-repeat;
@@ -183,6 +191,7 @@ body{
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
+        
     }
     .future-forecast {
         display: flex;
@@ -190,15 +199,16 @@ body{
         justify-content: space-between;
         align-items: center;
         overflow-x: scroll;
+        padding: 5px;
     }
 }
 
 
 /* Media Query for Responsiveness */
-@media only screen and (min-width: 636px) and (max-width: 900px){
+@media only screen and (min-width: 912px) and (max-width: 2600px){
 
     .container{
-        padding: 20px;
+        padding: 20px 70px;
     }
     
     .date-container .time {
@@ -208,7 +218,7 @@ body{
         font-size: 2rem;
     }
     .date-container .date {
-        font-size: 2rem;
+        font-size: 3rem;
     }
     .place-container{
         text-align: end;
@@ -223,7 +233,7 @@ body{
         padding: 12px;
     }
     .current-info .others .weather-item {
-        font-size: 14px;
+        font-size: 1.4rem;
     }
     .current-info {
         height: 25%;
@@ -237,13 +247,21 @@ body{
         width: 130px;
     }
     .today {
-        padding-left: 10%;
+        padding-left: 2%;
         padding-right: 17%;
     }
     .future-forecast{
+        background: rgba(24, 24, 27, 0.8);
+        padding: 25px;
+        position: fixed;
+        bottom: 0;
         display: flex;
+        color: white;
+        width: 100%;
+        align-items: center;
+        border: 2px solid white;
         justify-content: space-between;
-        overflow-y: scroll;
+        overflow-x: scroll;
     }
     .future-forecast .today .temp {
         font-size: 1.2rem;
