@@ -8,11 +8,12 @@
  }
 
 body{
-    background-image: url(/WeatherApp/assets/img/trees-sunrise.jpg);
+    background-image: url(/WeatherApp/assets/img/cloudy.jpg);
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     overflow: hidden;
-    height: 100vh;
+    min-height: 100vh;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -146,11 +147,12 @@ padding-right: 17%;
 /* Mobile Device Resolution */
 @media only screen and (min-width: 320px) and (max-width: 911px){
     body{
-        background-image: url(/WeatherApp/assets/img/trees-sunrise.jpg);
+        background-image: url(/WeatherApp/assets/img/cloudy.jpg);
         background-repeat: no-repeat;
+        background-position: bottom left;
         background-size: cover;
         overflow: hidden;
-        height: 100vh;
+        min-height: 100vh;
         font-family: 'Poppins', sans-serif;
     }
     /* Time */
